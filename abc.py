@@ -8,7 +8,7 @@ def get_filepaths(directory, ext="idl"):
     file_paths = []
     for file in os.listdir(directory):
         if file == "glue.cpp":
-            pass
+            continue
         if file.endswith(ext):
             file_paths.append(os.path.join(directory, file))  # Add it to the list.
     return file_paths  # Self-explanatory.
