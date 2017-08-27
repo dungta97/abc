@@ -7,6 +7,8 @@ def get_filepaths(directory, ext="idl"):
     # Load all file with extension `ext` in `directory`
     file_paths = []
     for file in os.listdir(directory):
+        if file == "glue.cpp":
+            pass
         if file.endswith(ext):
             file_paths.append(os.path.join(directory, file))  # Add it to the list.
     return file_paths  # Self-explanatory.
@@ -78,5 +80,5 @@ def build(proj_dir, proj_name, cpp_files):
 
 # for testing    
 if __name__ == "__main__":
-    gen("./test_project", "")
+    gen("../../hellohmt", "")
 
