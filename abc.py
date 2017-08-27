@@ -41,7 +41,7 @@ def gen(proj_dir, cfg_name):
     print cmd
     
     #Call to run cmd to create glue file
-    #p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
     
     #Create wrapper file, include all .h file in directory and include glue.cpp
     proj_name = os.path.basename(os.path.abspath(proj_dir))
@@ -74,6 +74,7 @@ def build(proj_dir, proj_name, cpp_files):
     
     print cmd
     # run cmd
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
 
     return True
 
